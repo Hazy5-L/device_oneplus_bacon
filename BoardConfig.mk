@@ -43,18 +43,7 @@ TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 
 # Tipsy additions
 BLOCK_BASED_OTA=false
-# Optimizations
-CLANG_O3 := true
-STRICT_ALIASING := false
-KRAIT_TUNINGS := true
-GRAPHITE_OPTS := false
-ENABLE_GCCONLY := true
 
-# Kernel Toolchain
-KERNEL_TOOLCHAIN := $(ANDROID_BUILD_TOP)/prebuilts/gcc/$(HOST_OS)-x86/arm/arm-eabi-4.9-uber/bin
-KERNEL_TOOLCHAIN_PREFIX := arm-eabi-
-# Rom Toolchain
-TARGET_GCC_VERSION_EXP := 4.9-uber
 
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
@@ -64,7 +53,7 @@ BOARD_KERNEL_SEPARATED_DT := true
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000 --tags_offset 0x01e00000
 BOARD_DTBTOOL_ARGS := -2
 TARGET_KERNEL_ARCH := arm
-TARGET_KERNEL_CONFIG := bacon_defconfig
+TARGET_KERNEL_CONFIG := msm8974_find7op_defconfig	
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8974
 
 # ANT+
